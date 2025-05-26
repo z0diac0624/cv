@@ -5,9 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Adam Didigov</title>
   <link rel="stylesheet" href="main.css" />
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css ">
 </head>
-<body>
+<body class="dark-mode">
+
+  <!-- Фон для дождя -->
+  <div id="rain"></div>
+
+  <!-- Холст для анимации звёзд -->
+  <canvas id="stars"></canvas>
+
+<!-- Цитата -->
+<div id="quote-modal" class="quote-hidden" style="display: none;">
+  <div class="quote-box">
+    <p>«Даже после самой темной ночи наступает рассвет.»</p>
+    <span>— Адам Дидигов</span>
+  </div>
+</div>
 
   <header>
     <nav>
@@ -18,11 +33,16 @@
         <li><a href="#contacts">Контакты</a></li>
       </ul>
     </nav>
+
+  <div class="changetheme">
+    <p>Смени тему -></p>
+  </div>
+
     <button id="theme-toggle">🌙</button>
   </header>
 
   <section id="about">
-    <img class="photo" src="zod.png" width="170" height="170" alt="фото">
+    <img class="photo" src="assets/zod.png" width="170" height="170" alt="фото">
     <h1>Привет, Я — Адам Дидигов</h1>
     <p>Я — QA engineer с опытом в функциональном и нефункциональном тестировании. Специализируюсь на поиске багов, обеспечении высокого качества продукта и улучшении пользовательского опыта.</p>
   </section>
@@ -62,18 +82,21 @@
     <p>Email: didigov.97@mail.ru</p>
     <p>Локация: Назрань</p>
     <div class="social-links">
-      <a href="http://t.me/z0diac" target="_blank">Telegram</a>
-      <a href="https://github.com/z0diac0624 " target="_blank">GitHub</a>
+      <a href="http://t.me/z0diac" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
+      <a href="https://github.com/z0diac0624" target="_blank"><i class="fab fa-github"></i> GitHub</a>
     </div>
   </div>
 
   <button type="button" class="credo-btn">Кредо</button>
 
-  <script src="js.js"></script>
+  <!-- Подпись внизу -->
+  <div id="footer-signature">
+    © zØdiac.
+  </div>
 
-  <footer>
-    <p>© z0diac.</p>
-  </footer>
+  <!-- Скрипты -->
+  <script src="stars.js"></script>
+  <script src="js.js"></script>
 
 </body>
 </html>
